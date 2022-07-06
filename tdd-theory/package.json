@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "echo sTART!",
     "test": "jest --watchAll",
     "test:ci": "jest --ci",
     "test:once": "jest",
     "test:part-a": "jest src/A-testing-basics-and-rules --verbose=false",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "hello": "echo Hello!"
   },
   "keywords": [],
   "author": "",
