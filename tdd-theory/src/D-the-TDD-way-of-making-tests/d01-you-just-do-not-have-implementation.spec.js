@@ -85,4 +85,15 @@ describe('attachProfession [d01]', () => {
 		expect(decoratedUser).toStrictEqual({name: 'Richard', profession: 'unknown'})
 	})
 
+	it('should decorate with profession for any object with any umber of properties', () => {
+		const user = {name: 'Richard', lastName: 'Kowalsky', age: 30};
+		const profession = 'driver'
+
+		const decoratedUser = attachProfession(user, profession);
+
+		expect(decoratedUser).toStrictEqual({name: 'Richard', lastName: 'Kowalsky', age: 30, profession})
+		// https://javascript.plainenglish.io/object-literals-using-object-property-shorthand-6360825c60ef
+		// TODO: MDN Doc.
+	})
+
 })
