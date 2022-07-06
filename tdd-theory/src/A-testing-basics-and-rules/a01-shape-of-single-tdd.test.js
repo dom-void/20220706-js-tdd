@@ -3,7 +3,13 @@
 
 // Funkcja która dodaje n liczb.
 
+// Krok #3 Refactoring implementacji:
+function sumAll(...numbers) {
+    return numbers.reduce((a, b) => a + b, 0);
+}
+
 // Krok #2 Piszę implementację
+/*
 function sumAll(...numbers) {
     let sum = 0;
     for(const number of numbers) {
@@ -11,6 +17,7 @@ function sumAll(...numbers) {
     }
     return sum;
 }
+*/
 
 // #1 Najpierw PISZE TESTY - wszystkie, które przyjdą mi do głowy
 test('should add 1 + 2 + 3 + 4 when 4 arguments passed', () => {
