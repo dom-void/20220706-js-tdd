@@ -9,7 +9,8 @@
     "test:ci": "jest --ci",
     "test:once": "jest",
     "test:part-a": "jest src/A-testing-basics-and-rules --verbose=false",
-    "a01":"jest src/A-testing-basics-and-rules/a01-shape-of-single.test.js --watchAll",
+    "a01": "jest src/A-testing-basics-and-rules/a01-shape-of-single.test.js --watchAll",
+    "a01tdd": "jest src/A-testing-basics-and-rules/a01-shape-of-single-tdd.test.js --watchAll",
     "coverage": "jest --coverage",
     "hello": "echo Hello!",
     "hello-world": "node src/0-warm-up/hello-world.js"
@@ -19,6 +20,7 @@
   "license": "ISC",
   "devDependencies": {
     "@testing-library/dom": "^8.14.0",
+    "@types/jest": "^28.1.4",
     "jest": "^28.1.2",
     "jest-environment-jsdom": "^28.1.2",
     "msw": "^0.42.3"
