@@ -10,7 +10,8 @@
     "test:once": "jest",
     "test:part-a": "jest src/A-testing-basics-and-rules --verbose=false",
     "coverage": "jest --coverage",
-    "hello": "echo Hello!"
+    "hello": "echo Hello!",
+    "hello-world": "node src/0-warm-up/hello-world.js"
   },
   "keywords": [],
   "author": "",
