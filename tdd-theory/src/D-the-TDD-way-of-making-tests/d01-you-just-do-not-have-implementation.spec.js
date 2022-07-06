@@ -44,17 +44,10 @@
  * Aby rozpocząć: usuń część .skip
  * */
 
-function attachProfession(user, proffesion) {
-	const userCopy = {};
-	for(const key in user) {
-		userCopy[key] = user[key];
-	}
-	if(!proffesion) {
-		userCopy.profession = 'unknown'
-	} else {	
-		userCopy.profession = proffesion;
-	}
-	return userCopy;
+function attachProfession(user, profession = 'unknown') {
+	// const userCopy = { ...user, profession };
+	//userCopy.profession = !profession ? 'unknown' : profession;
+	return { ...user, profession };
 }
 
 
