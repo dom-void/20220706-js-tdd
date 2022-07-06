@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "Orta.vscode-jest",
+    "WallabyJs.wallaby-vscode",
+    "vscode-icons-team.vscode-icons",
+    "eamodio.gitlens",
+    "ms-vscode.test-adapter-converter",
+    "hbenl.vscode-test-explorer",
+    "kavod-io.vscode-jest-test-adapter"
+  ]
+}

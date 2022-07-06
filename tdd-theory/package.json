@@ -1,0 +1,25 @@
+{
+  "name": "tdd-theory",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "test:ci": "jest --ci",
+    "test:once": "jest",
+    "test:part-a": "jest src/A-testing-basics-and-rules --verbose=false",
+    "coverage": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/dom": "^8.14.0",
+    "jest": "^28.1.2",
+    "jest-environment-jsdom": "^28.1.2",
+    "msw": "^0.42.3"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
