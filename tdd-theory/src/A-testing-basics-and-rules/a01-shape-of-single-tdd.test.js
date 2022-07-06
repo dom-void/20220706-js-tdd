@@ -3,6 +3,14 @@
 
 // Funkcja która dodaje n liczb.
 
+// Krok #2 Piszę implementację
+function sumAll(...numbers) {
+    let sum = 0;
+    for(const number of numbers) {
+        sum += number; // sum = sum + number;
+    }
+    return sum;
+}
 
 // #1 Najpierw PISZE TESTY - wszystkie, które przyjdą mi do głowy
 test('should add 1 + 2 + 3 + 4 when 4 arguments passed', () => {
