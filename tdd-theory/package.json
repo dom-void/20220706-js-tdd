@@ -11,6 +11,7 @@
     "test:part-a": "jest src/A-testing-basics-and-rules --verbose=false",
     "a01": "jest src/A-testing-basics-and-rules/a01-shape-of-single.test.js --watchAll",
     "a01tdd": "jest src/A-testing-basics-and-rules/a01-shape-of-single-tdd.test.js --watchAll",
+    "d01": "jest src/D-the-TDD-way-of-making-tests/d01-you-just-do-not-have-implementation.spec.js --watchAll",
     "coverage": "jest --coverage",
     "hello": "echo Hello!",
     "hello-world": "node src/0-warm-up/hello-world.js"

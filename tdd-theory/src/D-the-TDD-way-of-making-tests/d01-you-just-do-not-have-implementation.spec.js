@@ -44,7 +44,21 @@
  * Aby rozpocząć: usuń część .skip
  * */
 
-describe.skip('attachProfession [d01]', () => {
+function attachProfession(user, proffesion) {
+	const userCopy = {};
+	for(const key in user) {
+		userCopy[key] = user[key];
+	}
+	if(!proffesion) {
+		userCopy.profession = 'unknown'
+	} else {	
+		userCopy.profession = proffesion;
+	}
+	return userCopy;
+}
+
+
+describe('attachProfession [d01]', () => {
 
 
 	// #Zadanie:
