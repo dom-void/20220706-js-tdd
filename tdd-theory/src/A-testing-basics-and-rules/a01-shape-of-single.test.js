@@ -9,22 +9,36 @@
  *
  * Skoncentrujmy się nad tym, jak napisać dobry test dopiero w kolejnych przykładach.
  * */
-function dvideNumbers() {
+// Rozwiązane jeszcze bez Test Driven podejścia.
 
+function dvideNumbers(a, b) {
+	if(b === 0) {
+		return 0
+	}
+	if(!a && !b) {
+		return 0;	
+	}
+	return a / b;
 }
 
 
 test('divideNumbers should properly divide 2 numbers', () => {
 
-	
+	const result = dvideNumbers(200, 10);
+
+	expect(result).toBe(20)
 })
 
 test('divideNumbers should not divide by 0 - returning 0', () => {
 
-	
+	const result = dvideNumbers(200, 0);
+
+	expect(result).toBe(0)
 })
 
 test('divideNumbers should return 0 when no arguments given', () => {
-
 	
+	const result = dvideNumbers();
+
+	expect(result).toBe(0)
 })
