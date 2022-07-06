@@ -9,6 +9,22 @@
  *
  * Skoncentrujmy się nad tym, jak napisać dobry test dopiero w kolejnych przykładach.
  * */
-test('should be simple to test 😊 [a01]' , () => {
-	expect(10 + 10 + 10).toBe(30);
+function dvideNumbers() {
+
+}
+
+
+test('divideNumbers should properly divide 2 numbers', () => {
+
+	
+})
+
+test('divideNumbers should not divide by 0 - returning 0', () => {
+
+	
+})
+
+test('divideNumbers should return 0 when no arguments given', () => {
+
+	
 })
