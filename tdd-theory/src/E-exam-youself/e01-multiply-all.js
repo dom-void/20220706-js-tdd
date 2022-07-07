@@ -1,5 +1,6 @@
 function multiplyAll() {
-
+   
+    
 }
 
 // To jest "named export" w Node.js

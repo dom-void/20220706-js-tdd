@@ -41,11 +41,7 @@ const { multiplyAll } = require('./e01-multiply-all');
 * 3rd - refactor
 * */
 
-describe.skip('multiplyAll', () => {
-
-	beforeEach(() => {
-		expect.hasAssertions();
-	})
+describe('multiplyAll', () => {
 
 	it('should multiply N given arguments', () => {
 
@@ -54,7 +50,17 @@ describe.skip('multiplyAll', () => {
 		expect(result).toEqual(54)
 	})
 
-	it.todo('should return 1 if no arguments given')
+	it('should return 1 if no arguments given', () => {
 
+		const result = multiplyAll()
 
+		expect(result).toEqual(1)
+	})
+
+	it('should skip non numeric arguments if given', () => {
+
+		const result = multiplyAll(1, '90', 2, [], 2)
+
+		expect(result).toEqual(4)
+	})
 })
