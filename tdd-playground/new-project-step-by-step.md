@@ -7,7 +7,7 @@
 4. Tworzymy katalog z kodem (+ przykład main.js) [src](src)
 5. Instalujemy zależnosci `jest`, wszystkie na raz:
 ```
-npm install -D jest @jest/types
+npm install -D jest @types/jest
 ```
 6. podmieniamy skrypt "test" aby uruchamiać `jest`'a
 ```json
