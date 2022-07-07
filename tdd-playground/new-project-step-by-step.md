@@ -37,3 +37,17 @@ export function makeBanner(text) { /*....*/ }
 // main.js
 import { makeBanner } from './banner.js'
 ```
+10. wprowadzenie `ESM`(EcmaScript Modules) - do testów:
+- dodanie zależności:
+```
+npm i -D @babel/preset-env
+```
+- zmiana w pliku `.spec.js` na `import`
+- dodatnie pliku [.babelrc](.babelrc) z konfiguracją:
+```json
+{
+  "presets": [
+    "@babel/preset-env"
+  ]
+}
+```

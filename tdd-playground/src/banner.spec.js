@@ -1,4 +1,5 @@
-const { makeBanner } = require('./banner');
+// Poniewaz Babel obsuguje testy - nie muszę dopisywać .js!
+import { makeBanner } from './banner';
 
 describe('banner', () => {
 
