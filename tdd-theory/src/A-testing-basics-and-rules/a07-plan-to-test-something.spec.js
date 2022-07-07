@@ -16,4 +16,16 @@ describe('makeAnAnimalFactory [a007]', () => {
 	it.todo('should handle mammal type with ....');
 
 	it.todo('should handle bird type with ....');
+
+
+	it.each([
+			[1, 1, 2],
+			[1, 2, 3],
+			[2, 2, 4],
+	  ])('when %i + %i it should be %i', (a, b, expected) => {
+		expect(a + b).toBe(expected);
+	  });
+
 })
+
+
