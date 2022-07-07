@@ -15,3 +15,9 @@ npm install -D jest @jest/types
     "test": "jest"
 }
 ```
+7. [opcjonalne] Dodajemy (aby mieć co testować) kod i moduły (własne) do projektu i skrypt do jego uruchomienia:
+```json
+{
+     "start": "node src/main.js"
+}
+```
