@@ -21,3 +21,4 @@ npm install -D jest @types/jest
      "start": "node src/main.js"
 }
 ```
+8. przykładowy test [banner.spec.js](src/banner.spec.js) + skrypt `jest:watch`
