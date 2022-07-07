@@ -1,0 +1,1 @@
+export const LUCKY_NUMBER = 3002;
