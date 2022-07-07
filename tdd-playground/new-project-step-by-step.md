@@ -22,3 +22,18 @@ npm install -D jest @types/jest
 }
 ```
 8. przykładowy test [banner.spec.js](src/banner.spec.js) + skrypt `test:watch`
+9. wprowadzenie `ESM`(EcmaScript Modules) - do projektu:
+- dodatnie wpisu do [package.json](package.json):
+```
+{
+    "type":"module"
+}
+```
+- edycja importów i exportów w plikach `.js`
+```javascript
+// banner.js
+export function makeBanner(text) { /*....*/ }
+
+// main.js
+import { makeBanner } from './banner.js'
+```
