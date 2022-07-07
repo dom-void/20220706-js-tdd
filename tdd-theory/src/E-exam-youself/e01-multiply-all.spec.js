@@ -63,4 +63,20 @@ describe('multiplyAll', () => {
 
 		expect(result).toEqual(4)
 	})
+
+	it('should skip NaN argument from calculation', () => {
+
+		const result = multiplyAll(2, 2, NaN, 2, 8)
+
+		expect(result).toEqual(64)
+	})
+
+	it('should work with decimal numbers', () => {
+
+		const result = multiplyAll(2, 0.5, 0.8, 0.3)
+
+		expect(result).toEqual(0.24)
+		// Ale można też tak:
+		expect(result).toBeCloseTo(0.25, 1)
+	})
 })

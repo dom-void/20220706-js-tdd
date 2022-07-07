@@ -4,7 +4,7 @@ function multiplyAll(...numbers) {
    }
    let result = 1;
    numbers.forEach((num) => {
-        if(typeof num === 'number') {
+        if(typeof num === 'number' && !Number.isNaN(num)) {
             result = result * num;
         }
    })
