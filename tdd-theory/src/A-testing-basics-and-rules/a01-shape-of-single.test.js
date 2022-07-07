@@ -13,7 +13,7 @@
 
 function dvideNumbers(a, b) {
 	if(b === 0) {
-		return 0
+		throw new Error('You cannot divide by 0')
 	}
 	if(!a && !b) {
 		return 0;	
@@ -29,11 +29,22 @@ test('divideNumbers should properly divide 2 numbers', () => {
 	expect(result).toBe(20)
 })
 
+/*
 test('divideNumbers should not divide by 0 - returning 0', () => {
 
 	const result = dvideNumbers(200, 0);
 
 	expect(result).toBe(0)
+})
+*/
+
+test('divideNumbers should throw an Error when try to divide by 0', () => {
+	
+	expect(() => dvideNumbers(200, 0)).toThrowError('You cannot divide by 0');
+
+	// throw new Error('Hello reporter !')
+
+	// console.log('1')
 })
 
 test('divideNumbers should return 0 when no arguments given', () => {
