@@ -1,4 +1,9 @@
+// Czysto poglądowo dla obrazu sytuacji z MSW (https://mswjs.io/)
+//import { usePostService } from './post-service.js';
+
 export async function postWrapper(postService, postId) {
+
+    // const {title, userId, body} = usePostService(postId);
 
     try {
         //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
