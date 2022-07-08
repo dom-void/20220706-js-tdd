@@ -1,3 +1,5 @@
+import { postWrapper } from './post-wrapper'
+
 describe('post-wrapper', () => {
 
     const postId = 1;
@@ -17,10 +19,12 @@ describe('post-wrapper', () => {
 
         const postHTML = await postWrapper(postService, postId)
 
-        expect(postHTML).toBe(`
-        <h4>Mój super post (22)</h4>
-        <p>His mother had always taught</p>
-        `)
+        // expect(postHTML).toBe(`
+        // <h4>Mój super post (22)</h4>
+        // <p>His mother had always taught</p>
+        // `)
+        expect(postHTML).toContain('<h4>Mój super post (22)</h4>')
+        expect(postHTML).toContain('<p>His mother had always taught</p>')
     })
 
     it('should return title in h4 tag', async () => {
