@@ -2,6 +2,7 @@ import { postWrapper } from './post-wrapper'
 
 describe('post-wrapper', () => {
 
+    const NOT_EXISTING_POST_ID = 12671;
     const postId = 1;
     const postService = {
         async getOne(id) {
@@ -50,6 +51,11 @@ describe('post-wrapper', () => {
     })
 
     // dodatek
-    it.todo('should return "Post not exist" message when service returns 404')
+    it('should return "Post not exist" message when message not exist', async () => {
+        const postHTML = await postWrapper(postService, NOT_EXISTING_POST_ID)
+
+        expect(postHTML).toContain('<h4>Error</h4>')
+        expect(postHTML).toContain(`<p>Post not exist</p>`)
+    })
 
 })
