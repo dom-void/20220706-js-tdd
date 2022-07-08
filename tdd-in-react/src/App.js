@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+
+  const [count, setCount] = useState(0)
+
+  const condition = true;
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +24,7 @@ function App() {
           Learn React
         </a>
       </header>
+      { condition && <button data-testid="btn" onClick={() => setCount(c => c + 1)}>Hello {count}</button> }
     </div>
   );
 }
