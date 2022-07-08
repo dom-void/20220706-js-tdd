@@ -1,34 +1,37 @@
 const GAME_CHOICES = ['rock', 'paper', 'scissors']
 
+function throwIfNotInChoice(choice) {
+    if(!GAME_CHOICES.includes(choice)) {
+        throw new Error(`Nie ma takiego ruchu jak: ${choice}`)
+    }
+}
+
+const WINNING_CODITIONS = {
+    rock: 'scissors',
+    paper: 'rock',
+    scissors: 'paper'
+}
+
 export function gameRound(player1Choice, player2Choice) {
-    if(!GAME_CHOICES.includes(player1Choice)) {
-        throw new Error(`Nie ma takiego ruchu jak: ${player1Choice}`)
-    }
-    if(!GAME_CHOICES.includes(player2Choice)) {
-        throw new Error(`Nie ma takiego ruchu jak: ${player2Choice}`)
-    }
+    throwIfNotInChoice(player1Choice)
+    throwIfNotInChoice(player2Choice)
     if(player1Choice === player2Choice) {
         return 'DRAW'
     }
-    if(
-        player1Choice === 'rock' && player2Choice === 'scissors' ||
-        player1Choice === 'paper' && player2Choice === 'rock' ||
-        player1Choice === 'scissors' && player2Choice === 'paper' 
-        ) {
+    if(WINNING_CODITIONS[player1Choice] === player2Choice){
         return 'WIN'
     }
     return 'LOOSE'
 }
 
+const GAME_STATE_MAPPER = {
+    DRAW: 'REMIS',
+    WIN: 'WYGRANA',
+    LOOSE: 'PRZEGRAŁEŚ'
+}
+
 export function gameResult(state, cpuChoice) {
-    let stateText;
-    if(state === 'WIN') {
-        stateText = 'WYGRANA'
-    } else if(state === 'LOOSE') {
-        stateText = 'PRZEGRAŁEŚ'
-    } else {
-        stateText = 'REMIS'
-    }
+    const stateText = GAME_STATE_MAPPER[state];
     return `${stateText} - wybór komputera: ${cpuChoice}`
 }
 
