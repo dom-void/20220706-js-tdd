@@ -3,7 +3,7 @@
 
 ## Opis zadania:
 Posiadając serwis: [post-service](post-service.js), opakuj poprawnie dane w formacie HTML.  
-Użyj TDD — utwórz osobny dla implementacji i dla testu.  
+Użyj TDD — utwórz osobny plik dla implementacji i dla testu.  
 Najpierw przygotuj kilka planów do testu, a następnie: 
 - czerwony 
 - zielony 
