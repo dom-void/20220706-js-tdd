@@ -6,6 +6,10 @@ describe('post-wrapper', () => {
     const postId = 1;
     const postService = {
         async getOne(id) {
+            if(id === NOT_EXISTING_POST_ID) {
+                throw new Error("Post with id 'undefined' not found")
+                // return { message: "Post with id 'undefined' not found" };
+            }
             return {
                 title: 'Mój super post',
                 userId: 22,
