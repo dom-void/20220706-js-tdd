@@ -1,4 +1,4 @@
-
+import { gameRound, gameResult, randomCpuChoice } from './rps-game.js'
 
 describe('Rock - Paper - Scissors', () => {
 
