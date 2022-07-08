@@ -30,6 +30,19 @@ describe('[c007] - how to stub any module', () => {
 		// Jednak nie mamy w ten sposób możliwości sprawdzenia całości danych generowanych przez shoutBannerFor!
 	})
 
+	it('should work with outer dependency', () => {
+		const product = 'apples';
+		const price = 3.99;
+
+		const banner = shoutBannerFor(product, price, '12:33:23')
+
+		// Możemy do tego użyć tylko toMatch, prawda?
+		// Zmienia się tylko czas — więc to zadziała:
+		expect(banner).toBe('Welcome, today\'s (12:33:23) promotion is: apples for 3.99')
+
+		// Jednak nie mamy w ten sposób możliwości sprawdzenia całości danych generowanych przez shoutBannerFor!
+	})
+
 	// A co jeśli chcemy mockować implementację .time() i zobaczyć cały ciąg znaków?
 	it('should present banner with proper text', () => {
 		const product = 'bananas';
