@@ -6,5 +6,9 @@ export const postService = {
 	async getAll() {
 		 const { data } = await axios.get(hostURL + '/posts');
 		 return data.posts;
-	}
+	},
+	async getOne(id) {
+		const { data } = await axios.get(`${hostURL}/posts/${id}`);
+		return data;
+    }
 }
